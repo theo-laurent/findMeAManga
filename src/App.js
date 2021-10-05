@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// router
+import { BrowserRouter as Router, Route } from "react-router-dom";
+// components
+import Banner1 from "./components/banner1/Banner1.jsx";
+import Nav from "./components/nav/Nav.jsx";
+import FindManga from "./components/findManga/FindManga";
+import Results from "./components/results/Result";
+import TopManga from "./components/topManga/TopManga";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Banner1 />
+      <Router>
+        <Nav />
+        <Route path="/" exact component={FindManga} />
+        <Route path="/results" exact component={Results} />
+        <Route path="/top"exact  component={TopManga} />
+      </Router>
     </div>
   );
 }

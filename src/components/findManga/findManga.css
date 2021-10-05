@@ -1,0 +1,45 @@
+.containerFindManga {
+  width: 600px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.containerFindManga h2 {
+  background-color: #e8e8e8;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.containerFindManga ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.containerFindManga li {
+  background-color: #ffffff;
+  height: 50px;
+  padding-left: 30px;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.containerFindManga li:hover {
+  background-color: #a7d6da;
+}
+
+.containerFindManga a {
+  text-decoration: none;
+  color: black;
+}
