@@ -1,10 +1,21 @@
 .containerBanner1 {
   width: 100%;
   height: 200px;
+  background-color: #cf5c78;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerBanner1 h1 {
+  margin: 0;
+  margin-left: 50px;
+  font-family: "Staatliches", cursive;
+  font-size: 50px;
 }
 
 .containerBanner1 img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 200px;
   object-fit: cover;
 }

@@ -1,10 +1,13 @@
 import "./banner1.css";
-import image from "../../assets/imgtest.png";
+import image2 from "../../assets/banner2.png";
 
 export default function Banner1() {
   return (
     <div className="containerBanner1">
-      <img src={image} alt="" />
+      <h1>Find me a manga !</h1>
+      <div>
+        <img src={image2} alt="" />
+      </div>
     </div>
   );
 }

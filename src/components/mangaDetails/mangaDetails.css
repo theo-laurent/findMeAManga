@@ -1,0 +1,19 @@
+.containerMangaDetails {
+  width: 50%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  border: solid 1px black;
+  background-color: #f6f6f6;
+  padding: 50px;
+}
+
+.containerMangaDetails img {
+  width: 300px;
+}
+
+.containerMangaDetails_text {
+  margin-left: 50px;
+}

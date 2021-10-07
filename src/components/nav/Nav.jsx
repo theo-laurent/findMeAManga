@@ -8,10 +8,13 @@ export default function Nav() {
     <div className="containerNav">
       <ul className="containerNav_ul">
         <Link to="/">
-          <li>Trouver un manga</li>
+          <li>Home</li>
+        </Link>
+        <Link to="/">
+          <li>Find a manga</li>
         </Link>
         <Link to="/top">
-          <li>Le top 10 mangas</li>
+          <li>Top mangas</li>
         </Link>
       </ul>
     </div>

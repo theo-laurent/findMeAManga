@@ -34,10 +34,10 @@ export default function FindManga() {
   return (
     <div className="containerFindManga">
       {/* vide */}
-
+      <h1>Vous voulez lire un manga ...</h1>
       <div className="containerFindManga_1">
         <h2 onClick={() => affichage(setAffichage1, affichage1)}>
-          Un manga classique d'aventure ?
+          Classique style shonen ?
           <Arrow style={{ fontSize: "30px" }} />
         </h2>
         {affichage1 ? (
@@ -51,7 +51,7 @@ export default function FindManga() {
       {choice1 === true ? (
         <div>
           <h2 onClick={() => affichage(setAffichage2, affichage2)}>
-            Action, aventure ou sport ?
+            Plutôt action, aventure ou sport ?
             <Arrow style={{ fontSize: "30px" }} />
           </h2>
           {affichage2 ? (
@@ -89,7 +89,7 @@ export default function FindManga() {
       {(choice1 === false) & (choice2 === true) ? (
         <div>
           <h2 onClick={() => affichage(setAffichage3, affichage3)}>
-            Plutôt orienté vers ...
+            Orienté vers ...
             <Arrow style={{ fontSize: "30px" }} />
           </h2>
           {affichage3 ? (
@@ -121,7 +121,7 @@ export default function FindManga() {
       {(choice1 === false) & (choice2 === false) ? (
         <div>
           <h2 onClick={() => affichage(setAffichage4, affichage4)}>
-            Un manga drôle ? <Arrow style={{ fontSize: "30px" }} />
+            Je sais, un manga drôle ! <Arrow style={{ fontSize: "30px" }} />
           </h2>
           {affichage4 ? (
             <ul onClick={() => affichage(setAffichage3, affichage3)}>
@@ -160,8 +160,6 @@ export default function FindManga() {
                 {" "}
                 <li>Work Life</li>
               </Link>
-
-             
 
               <Link to={{ pathname: "/results", state: 36 }}>
                 {" "}

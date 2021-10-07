@@ -7,6 +7,7 @@ import Nav from "./components/nav/Nav.jsx";
 import FindManga from "./components/findManga/FindManga";
 import Results from "./components/results/Result";
 import TopManga from "./components/topManga/TopManga";
+import MangaDetails from "./components/mangaDetails/MangaDetails";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Nav />
         <Route path="/" exact component={FindManga} />
         <Route path="/results" exact component={Results} />
-        <Route path="/top"exact  component={TopManga} />
+        <Route path="/top" exact component={TopManga} />
+        <Route path="/results/:id" exact component={MangaDetails} />
       </Router>
     </div>
   );
