@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Nav />
       <Switch>
-        <Route path="/findMeAManga" exact component={Home} />
+        <Route path="/" exact component={Home} />
         <Route path="/find" exact component={FindManga} />
         <Route path="/top" exact component={TopManga} />
         <Route path="/results" exact component={Results} />
