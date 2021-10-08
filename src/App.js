@@ -12,7 +12,7 @@ import MangaDetails from "./components/mangaDetails/MangaDetails";
 function App() {
   return (
     <div className="App">
-      <Router basename={`${process.env.PUBLIC_URL}/`}>
+      <Router basename={process.env.PUBLIC_URL}>
         <Nav />
         <Route path="/" exact component={Home} />
         <Route path="/find" exact component={FindManga} />
