@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Route path="/" exact component={Home} basename="/findMeAManga" />
+      <Route path="/" exact component={Home}/>
       <Route path="/find" exact component={FindManga} />
       <Route path="/top" exact component={TopManga} />
       <Route path="/results" exact component={Results} />
