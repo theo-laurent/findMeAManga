@@ -11,16 +11,16 @@ import MangaDetails from "./components/mangaDetails/MangaDetails";
 
 function App() {
   return (
-    <div className="App">
-      <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL}>
+      <div className="App">
         <Nav />
         <Route path="/" exact component={Home} />
         <Route path="/find" exact component={FindManga} />
         <Route path="/top" exact component={TopManga} />
         <Route path="/results" exact component={Results} />
         <Route path="/results/:id" exact component={MangaDetails} />
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 
