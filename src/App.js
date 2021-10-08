@@ -1,6 +1,6 @@
 import "./App.css";
 // router
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // components
 import Nav from "./components/nav/Nav.jsx";
 import Home from "./components/home/Home";
@@ -14,11 +14,13 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Nav />
-        <Route path="/" exact component={Home} />
-        <Route path="/find" exact component={FindManga} />
-        <Route path="/top" exact component={TopManga} />
-        <Route path="/results" exact component={Results} />
-        <Route path="/results/:id" exact component={MangaDetails} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/find" exact component={FindManga} />
+          <Route path="/top" exact component={TopManga} />
+          <Route path="/results" exact component={Results} />
+          <Route path="/results/:id" exact component={MangaDetails} />
+        </Switch>
       </div>
     </Router>
   );
