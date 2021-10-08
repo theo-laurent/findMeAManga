@@ -37,7 +37,7 @@ export default function Nav() {
           }
         >
           <li>
-            <NavLink to="/findMeAManga/" exact>
+            <NavLink to="/" exact>
               Home
             </NavLink>
           </li>
