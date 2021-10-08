@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Route path="/findMeAManga" exact component={Home} />
-      <Route path="/findMeAManga/find" exact component={FindManga} />
-      <Route path="/findMeAManga/top" exact component={TopManga} />
-      <Route path="/findMeAManga/results" exact component={Results} />
-      <Route path="/findMeAManga/results/:id" exact component={MangaDetails} />
+      <Route path="/" exact component={Home} />
+      <Route path="/find" exact component={FindManga} />
+      <Route path="/top" exact component={TopManga} />
+      <Route path="/results" exact component={Results} />
+      <Route path="/results/:id" exact component={MangaDetails} />
     </div>
   );
 }

@@ -43,13 +43,13 @@ export default function Nav() {
           </li>
 
           <li>
-            <NavLink to="/findMeAManga/find" exact>
+            <NavLink to="/find" exact>
               Find a manga
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/findMeAManga/top" exact>
+            <NavLink to="/top" exact>
               Top mangas
             </NavLink>
           </li>
@@ -58,19 +58,19 @@ export default function Nav() {
 
       <ul className="containerNav_ul">
         <li>
-          <NavLink to="/findMeAManga/" exact activeClassName="active">
+          <NavLink to="/" exact activeClassName="active">
             Home
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/findMeAManga/find" exact activeClassName="active">
+          <NavLink to="/find" exact activeClassName="active">
             Find a manga
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/findMeAManga/top" exact activeClassName="active">
+          <NavLink to="/top" exact activeClassName="active">
             Top mangas
           </NavLink>
         </li>
