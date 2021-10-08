@@ -1,21 +1,30 @@
 // css
 import "./nav.css";
 // import link router
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Nav() {
   return (
     <div className="containerNav">
+      <h1>FIND ME A MANGA</h1>
       <ul className="containerNav_ul">
-        <Link to="/">
-          <li>Home</li>
-        </Link>
-        <Link to="/">
-          <li>Find a manga</li>
-        </Link>
-        <Link to="/top">
-          <li>Top mangas</li>
-        </Link>
+        <li>
+          <NavLink to="/" exact activeClassName="active">
+            Home
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/find" exact activeClassName="active">
+            Find a manga
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/top" exact activeClassName="active">
+            Top mangas
+          </NavLink>
+        </li>
       </ul>
     </div>
   );

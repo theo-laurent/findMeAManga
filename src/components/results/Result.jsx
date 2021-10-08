@@ -8,7 +8,9 @@ import { v4 as uuidv4 } from "uuid";
 
 export default function Results(props) {
   const [arrayManga, setArrayManga] = useState([]);
-  const genre = props.location.state;
+  const [loading, setLoading] = useState(true);
+  const genre = props.location.state.genre;
+  const nameGenre = props.location.state.name;
 
   useEffect(
     function () {
@@ -36,6 +38,7 @@ export default function Results(props) {
         .then(function (data) {
           let arrayManga = data[0].results.concat(data[1].results);
           setArrayManga(arrayManga);
+          setLoading(false);
         })
         .catch(function (error) {
           return error;
@@ -44,34 +47,44 @@ export default function Results(props) {
     [genre]
   );
 
-
   return (
     <div className="containerResultsGlobal">
-      <h1>Les mangas correspondant à vos critères :</h1>
+      <h1>Les mangas correspondant à vos choix : {`{${nameGenre}}`}</h1>
       <div className="containerResults">
-        {arrayManga.map(function (manga) {
-          return (
-            <div className="containerResults_manga" key={uuidv4()}>
-              <Link to={`/results/${manga.mal_id}`}>
-                <img src={manga.image_url} alt="" />{" "}
-                <div className="containerResults_manga_double">
-                  <ul>
-                    <li>
-                      <strong>Note:</strong> {manga.score}
-                    </li>
-                    <li>
-                      <strong>Synopsis: </strong>
-                      {manga.synopsis}
-                    </li>
-                  </ul>
-                </div>
-                <div className="containerResults_manga_text">
-                  <h2 title={manga.title}>{manga.title}</h2>
-                </div>
-              </Link>
-            </div>
-          );
-        })}
+        {loading ? (
+          <div className="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+        ) : (
+          arrayManga.map(function (manga) {
+            return (
+              <div className="containerResults_manga" key={uuidv4()}>
+                <Link to={`/results/${manga.mal_id}`}>
+                  <img src={manga.image_url} alt="" />{" "}
+                  <div className="containerResults_manga_double">
+                    <ul>
+                      <li>
+                        <strong>Note:</strong> {manga.score}
+                      </li>
+                      <li>
+                        <strong>Synopsis: </strong>
+                        {manga.synopsis}
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="containerResults_manga_text">
+                    <h2 title={manga.title}>{manga.title}</h2>
+                  </div>
+                </Link>
+              </div>
+            );
+          })
+        )}
       </div>
     </div>
   );

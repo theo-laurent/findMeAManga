@@ -56,13 +56,28 @@ export default function FindManga() {
           </h2>
           {affichage2 ? (
             <ul>
-              <Link to={{ pathname: "/results", state: 1 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 1, name: "Action" },
+                }}
+              >
                 <li>Action</li>
               </Link>
-              <Link to={{ pathname: "/results", state: 2 }}>
-                <li>Aventure</li>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 2, name: "Adventure" },
+                }}
+              >
+                <li>Adventure</li>
               </Link>
-              <Link to={{ pathname: "/results", state: 30 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 30, name: "Sports" },
+                }}
+              >
                 {" "}
                 <li>Sports</li>
               </Link>
@@ -94,22 +109,42 @@ export default function FindManga() {
           </h2>
           {affichage3 ? (
             <ul>
-              <Link to={{ pathname: "/results", state: 8 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 8, name: "Drama" },
+                }}
+              >
                 {" "}
                 <li>Drama</li>
               </Link>
 
-              <Link to={{ pathname: "/results", state: 14 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 14, name: "Horror" },
+                }}
+              >
                 {" "}
-                <li>Horreur</li>
+                <li>Horror</li>
               </Link>
 
-              <Link to={{ pathname: "/results", state: 40 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 40, name: "Psychological" },
+                }}
+              >
                 {" "}
-                <li>Psychologique</li>
+                <li>Psychological</li>
               </Link>
 
-              <Link to={{ pathname: "/results", state: 45 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 45, name: "Suspense" },
+                }}
+              >
                 {" "}
                 <li>Suspense</li>
               </Link>
@@ -125,7 +160,12 @@ export default function FindManga() {
           </h2>
           {affichage4 ? (
             <ul onClick={() => affichage(setAffichage3, affichage3)}>
-              <Link to={{ pathname: "/results", state: 20 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 20, name: "Comedy" },
+                }}
+              >
                 {" "}
                 <li onClick={() => choiceTrue(setChoice3)}>Enfin ! Oui ! </li>
               </Link>
@@ -146,22 +186,42 @@ export default function FindManga() {
           </h2>
           {affichage5 ? (
             <ul>
-              <Link to={{ pathname: "/results", state: 23 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 23, name: "School" },
+                }}
+              >
                 {" "}
                 <li>School</li>
               </Link>
 
-              <Link to={{ pathname: "/results", state: 19 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 19, name: "Music" },
+                }}
+              >
                 {" "}
                 <li>Musique</li>
               </Link>
 
-              <Link to={{ pathname: "/results", state: 48 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 48, name: "Work Life" },
+                }}
+              >
                 {" "}
                 <li>Work Life</li>
               </Link>
 
-              <Link to={{ pathname: "/results", state: 36 }}>
+              <Link
+                to={{
+                  pathname: "/results",
+                  state: { genre: 36, name: "Slice of life" },
+                }}
+              >
                 {" "}
                 <li>Slice of life</li>
               </Link>

@@ -1,7 +1,9 @@
 .containerResultsGlobal {
-  margin-top: 50px;
   width: 80%;
   margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "lato";
 }
 
 .containerResults {
@@ -14,10 +16,11 @@
 
 .containerResults_manga {
   width: 185px;
-  height: 300px;
   margin: 15px;
   margin-bottom: 70px;
   border-radius: 5px;
+  padding: 5px;
+  background-color: white;
 }
 
 .containerResults_manga a {
@@ -64,9 +67,8 @@
 .containerResults_manga_text {
   width: 90%;
   margin: auto;
-  height: 50px;
   font-size: 11px;
-  text-align: center;
+  border-top: 1px solid black;
 }
 
 .containerResults_manga_text h2:hover {

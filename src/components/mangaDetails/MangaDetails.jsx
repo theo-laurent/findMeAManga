@@ -1,11 +1,17 @@
-import { useEffect } from "react";
-import { useParams } from "react-router";
-import { useState } from "react/cjs/react.development";
+// style css
 import "./mangaDetails.css";
+// react
+import { useEffect, useState } from "react";
+// react router
+import { useParams, useHistory } from "react-router-dom";
+// react icons
+import { BsArrowReturnLeft } from "react-icons/bs";
 
 export default function MangaDetails() {
   const [manga, setManga] = useState();
+  const [loading, setLoading] = useState(true);
   const id = useParams().id;
+  const history = useHistory();
 
   useEffect(
     function () {
@@ -15,6 +21,7 @@ export default function MangaDetails() {
         })
         .then(function (data) {
           setManga(data);
+          setLoading(false);
         })
         .catch(function (error) {
           return error;
@@ -27,17 +34,39 @@ export default function MangaDetails() {
 
   return (
     <>
-      {manga ? (
-        <div className="containerMangaDetails">
-          <img src={manga.image_url} alt="" />
-          <div className="containerMangaDetails_text">
-            <h2>Titre</h2>
-            <h3>Auteur</h3>
-            <p>synopsis</p>
-          </div>
+      {loading ? (
+        <div className="sk-chase">
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
         </div>
       ) : (
-        <div>chargement</div>
+        <div className="containerMangaDetailsGlobal">
+          <p
+            onClick={() => history.goBack()}
+            className="containerMangaDetails_text_back"
+          >
+            Back to results
+            <BsArrowReturnLeft className="icon" />
+          </p>
+          <div className="containerMangaDetails">
+            <img src={manga.image_url} alt="" />
+            <div className="containerMangaDetails_text">
+              <span className="containerMangaDetails_text_title">
+                <h2>{manga.title}</h2>
+                <h3>{manga.score} / 10</h3>
+              </span>
+              <h4>
+                <u>Author(s)</u> :{" "}
+                {manga.authors.map((author) => author.name + " / ")}
+              </h4>
+              <p>{manga.synopsis}</p>
+            </div>
+          </div>
+        </div>
       )}
     </>
   );

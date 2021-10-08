@@ -2,22 +2,22 @@ import "./App.css";
 // router
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // components
-import Banner1 from "./components/banner1/Banner1.jsx";
 import Nav from "./components/nav/Nav.jsx";
+import Home from "./components/home/Home";
 import FindManga from "./components/findManga/FindManga";
-import Results from "./components/results/Result";
 import TopManga from "./components/topManga/TopManga";
+import Results from "./components/results/Result";
 import MangaDetails from "./components/mangaDetails/MangaDetails";
 
 function App() {
   return (
     <div className="App">
-      <Banner1 />
       <Router>
         <Nav />
-        <Route path="/" exact component={FindManga} />
-        <Route path="/results" exact component={Results} />
+        <Route path="/" exact component={Home} />
+        <Route path="/find" exact component={FindManga} />
         <Route path="/top" exact component={TopManga} />
+        <Route path="/results" exact component={Results} />
         <Route path="/results/:id" exact component={MangaDetails} />
       </Router>
     </div>

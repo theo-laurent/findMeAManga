@@ -1,19 +1,64 @@
-.containerMangaDetails {
+.containerMangaDetailsGlobal {
   width: 50%;
   margin: auto;
   margin-top: 60px;
   margin-bottom: 100px;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  font-family: "lato", "arial";
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.containerMangaDetails {
   display: flex;
   justify-content: space-around;
-  border: solid 1px black;
-  background-color: #f6f6f6;
-  padding: 50px;
+  align-items: center;
 }
 
 .containerMangaDetails img {
-  width: 300px;
+  min-width: 300px;
+  height: 100%;
 }
 
 .containerMangaDetails_text {
   margin-left: 50px;
+}
+
+.containerMangaDetails_text_back {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  color: #3f51b5;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.containerMangaDetails_text_back:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.containerMangaDetails_text_title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.containerMangaDetails_text h2 {
+  border-bottom: 3px solid#f5c21b;
+}
+
+.containerMangaDetails_text h3 {
+  color: rgb(194, 26, 26);
+}
+
+.icon {
+  font-size: 25px;
 }
