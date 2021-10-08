@@ -49,7 +49,7 @@ export default function Results(props) {
 
   return (
     <div className="containerResultsGlobal">
-      <h1>Les mangas correspondant à vos choix : {`{${nameGenre}}`}</h1>
+      <h1>The manga corresponding to your choices : {`{${nameGenre}}`}</h1>
       <div className="containerResults">
         {loading ? (
           <div className="sk-chase">

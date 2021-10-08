@@ -34,26 +34,27 @@ export default function FindManga() {
   return (
     <div className="containerFindManga">
       {/* vide */}
-      <h1>Vous voulez lire un manga ...</h1>
+      <h1>You want to read a manga ...</h1>
       <div className="containerFindManga_1">
-        <h2 onClick={() => affichage(setAffichage1, affichage1)}>
-          Classique style shonen ?
+        <span onClick={() => affichage(setAffichage1, affichage1)}>
+          <h2>Classic, typical shonen?</h2>{" "}
           <Arrow style={{ fontSize: "30px" }} />
-        </h2>
+        </span>
         {affichage1 ? (
           <ul onClick={() => affichage(setAffichage1, affichage1)}>
-            <li onClick={() => choiceTrue(setChoice1)}>Carrément !</li>
-            <li onClick={() => choiceFalse(setChoice1)}>Non pas du tout.</li>
+            <li onClick={() => choiceTrue(setChoice1)}>Totally !</li>
+            <li onClick={() => choiceFalse(setChoice1)}>No.</li>
           </ul>
         ) : null}
       </div>
       {/* vide */}
       {choice1 === true ? (
         <div>
-          <h2 onClick={() => affichage(setAffichage2, affichage2)}>
-            Plutôt action, aventure ou sport ?
+          <span onClick={() => affichage(setAffichage2, affichage2)}>
+            <h2>Rather action, aventure or sport ?</h2>
             <Arrow style={{ fontSize: "30px" }} />
-          </h2>
+          </span>
+
           {affichage2 ? (
             <ul>
               <Link
@@ -88,25 +89,28 @@ export default function FindManga() {
       {/* vide */}
       {choice1 === false ? (
         <div>
-          <h2 onClick={() => affichage(setAffichage2, affichage2)}>
-            Un manga plutôt sombre alors ?{" "}
+          <span onClick={() => affichage(setAffichage2, affichage2)}>
+            {" "}
+            <h2>A dark manga then?</h2>
             <Arrow style={{ fontSize: "30px" }} />
-          </h2>
+          </span>
+
           {affichage2 ? (
             <ul onClick={() => affichage(setAffichage2, affichage2)}>
-              <li onClick={() => choiceTrue(setChoice2)}>Oui !</li>
-              <li onClick={() => choiceFalse(setChoice2)}>Toujours pas.</li>
+              <li onClick={() => choiceTrue(setChoice2)}>Yes !</li>
+              <li onClick={() => choiceFalse(setChoice2)}>Not at all</li>
             </ul>
           ) : null}
         </div>
       ) : null}
       {/* vide */}
       {(choice1 === false) & (choice2 === true) ? (
-        <div>
-          <h2 onClick={() => affichage(setAffichage3, affichage3)}>
-            Orienté vers ...
-            <Arrow style={{ fontSize: "30px" }} />
-          </h2>
+        <div onClick={() => affichage(setAffichage3, affichage3)}>
+          <span>
+            {" "}
+            <h2>Facing...</h2>v
+          </span>
+
           {affichage3 ? (
             <ul>
               <Link
@@ -155,9 +159,12 @@ export default function FindManga() {
       {/* vide */}
       {(choice1 === false) & (choice2 === false) ? (
         <div>
-          <h2 onClick={() => affichage(setAffichage4, affichage4)}>
-            Je sais, un manga drôle ! <Arrow style={{ fontSize: "30px" }} />
-          </h2>
+          <span onClick={() => affichage(setAffichage4, affichage4)}>
+            {" "}
+            <h2>I know, a funny manga!</h2>{" "}
+            <Arrow style={{ fontSize: "30px" }} />
+          </span>
+
           {affichage4 ? (
             <ul onClick={() => affichage(setAffichage3, affichage3)}>
               <Link
@@ -167,10 +174,10 @@ export default function FindManga() {
                 }}
               >
                 {" "}
-                <li onClick={() => choiceTrue(setChoice3)}>Enfin ! Oui ! </li>
+                <li onClick={() => choiceTrue(setChoice3)}>Finnaly ! Yes ! </li>
               </Link>
 
-              <li onClick={() => choiceFalse(setChoice3)}>Non...</li>
+              <li onClick={() => choiceFalse(setChoice3)}>Always not...</li>
             </ul>
           ) : null}
         </div>
@@ -179,11 +186,13 @@ export default function FindManga() {
       {choice3 === true ? <div>fetch</div> : null}
       {/* vide */}
       {(choice1 === false) & (choice2 === false) & (choice3 === false) ? (
-        <div>
-          <h2 onClick={() => affichage(setAffichage5, affichage5)}>
-            Il ne reste que les mangas tranches de vie :
+        <div onClick={() => affichage(setAffichage5, affichage5)}>
+          <span>
+            {" "}
+            <h2>There are only the slices of life manga left:</h2>{" "}
             <Arrow style={{ fontSize: "30px" }} />
-          </h2>
+          </span>
+
           {affichage5 ? (
             <ul>
               <Link

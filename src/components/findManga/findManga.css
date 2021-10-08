@@ -6,7 +6,7 @@
   font-family: "lato", "arial";
 }
 
-.containerFindManga h2 {
+.containerFindManga span {
   background-color: #cccbc8;
   border-radius: 5px;
   width: 100%;
@@ -17,7 +17,12 @@
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 13px;
+}
+
+.containerFindManga span h2 {
+  text-align: center;
+  width: 80%;
 }
 
 .containerFindManga ul {
@@ -45,4 +50,13 @@
 .containerFindManga a {
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 480px) {
+  .containerFindManga {
+    width: 90%;
+    text-align: center;
+  }
+
+  
 }

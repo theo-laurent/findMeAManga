@@ -1,5 +1,5 @@
 .containerResultsGlobal {
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 50px;
   text-align: center;
@@ -73,4 +73,19 @@
 
 .containerResults_manga_text h2:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .containerResults_manga {
+    width: 45%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .containerResults_manga img {
+    height: 200px;
+  }
+  .containerResults_manga_double {
+    display: none;
+  }
 }

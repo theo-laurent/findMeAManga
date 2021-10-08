@@ -31,3 +31,53 @@
   background-color: #858286;
   color: white !important;
 }
+.containerNav_responsive {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .containerNav h1 {
+    margin: 10px;
+  }
+
+  .containerNav_ul {
+    display: none;
+  }
+
+  .containerNav_responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+
+  .containerNav_responsive-close {
+    display: none;
+  }
+
+  .containerNav_responsive-open {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #4c6c9d;
+    border-radius: 5px;
+    height: 200px;
+    width: 50%;
+    position: absolute;
+    top: 47px;
+    justify-content: space-around;
+  }
+  .containerNav_responsive-open a {
+    color: white;
+  }
+  .containerNav_responsive-open li {
+    border-bottom: solid 1px black;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .containerNav h1 {
+    font-size: 30px;
+  }
+}
