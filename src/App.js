@@ -11,18 +11,16 @@ import MangaDetails from "./components/mangaDetails/MangaDetails";
 
 function App() {
   return (
-    <Router >
-      <div className="App">
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/find" exact component={FindManga} />
-          <Route path="/top" exact component={TopManga} />
-          <Route path="/results" exact component={Results} />
-          <Route path="/results/:id" exact component={MangaDetails} />
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <Nav />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/find" exact component={FindManga} />
+        <Route path="/top" exact component={TopManga} />
+        <Route path="/results" exact component={Results} />
+        <Route path="/results/:id" exact component={MangaDetails} />
+      </Switch>
+    </div>
   );
 }
 
