@@ -5,10 +5,9 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
 
 export default function Nav() {
-  const [test, setTest] = useState(false);
 
   function navClick() {
-    return setTest(!test);
+    
   }
 
   return (
