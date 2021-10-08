@@ -1,0 +1,23 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-ANSIHTML-1296849:
+    - react-scripts > webpack-dev-server > ansi-html:
+        reason: None given
+        expires: '2021-11-07T17:38:55.557Z'
+  SNYK-JS-PROMPTS-1729737:
+    - react-scripts > prompts:
+        reason: None given
+        expires: '2021-11-07T17:38:55.557Z'
+    - react-scripts > react-dev-utils > prompts:
+        reason: None given
+        expires: '2021-11-07T17:38:55.558Z'
+  SNYK-JS-SETVALUE-1540541:
+    - react-scripts > babel-jest > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-11-07T17:38:55.558Z'
+    - react-scripts > babel-jest > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2021-11-07T17:38:55.558Z'
+patch: {}
