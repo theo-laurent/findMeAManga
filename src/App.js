@@ -1,6 +1,6 @@
 import "./App.css";
 // router
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 // components
 import Nav from "./components/nav/Nav.jsx";
 import Home from "./components/home/Home";
@@ -11,7 +11,7 @@ import MangaDetails from "./components/mangaDetails/MangaDetails";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router >
       <div className="App">
         <Nav />
         <Switch>
