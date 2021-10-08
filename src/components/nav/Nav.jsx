@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
 
 export default function Nav() {
-  const [toggle, setToggle] = useState(false);
+  const [test, setTest] = useState(false);
 
   function navClick() {
-    return setToggle(!toggle);
+    return setTest(!test);
   }
 
   return (
@@ -31,7 +31,7 @@ export default function Nav() {
         </svg>
         <ul
           className={
-            toggle
+            test
               ? "containerNav_responsive-open"
               : "containerNav_responsive-close"
           }

@@ -1,6 +1,6 @@
 import "./App.css";
 // router
-import { Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 // components
 import Nav from "./components/nav/Nav.jsx";
 import Home from "./components/home/Home";
