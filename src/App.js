@@ -1,6 +1,6 @@
 import "./App.css";
 // router
-import { Route, Switch } from "react-router-dom";
+import {Route, Switch } from "react-router-dom";
 // components
 import Nav from "./components/nav/Nav.jsx";
 import Home from "./components/home/Home";
@@ -11,16 +11,17 @@ import MangaDetails from "./components/mangaDetails/MangaDetails";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/find" exact component={FindManga} />
-        <Route path="/top" exact component={TopManga} />
-        <Route path="/results" exact component={Results} />
-        <Route path="/results/:id" exact component={MangaDetails} />
-      </Switch>
-    </div>
+      <div className="App">
+        <Nav />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/find" exact component={FindManga} />
+          <Route path="/top" exact component={TopManga} />
+          <Route path="/results" exact component={Results} />
+          <Route path="/results/:id" exact component={MangaDetails} />
+        </Switch>
+      </div>
+  
   );
 }
 
