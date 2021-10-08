@@ -2,7 +2,7 @@
 import "./nav.css";
 // import link router
 import { NavLink } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 export default function Nav() {
   const [test, setTest] = useState(false);
