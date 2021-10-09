@@ -30,18 +30,19 @@ export default function MangaDetails() {
     [id]
   );
 
-  console.log(manga);
+  console.log(history);
+
 
   return (
     <>
       {loading ? (
         <div className="sk-chase">
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
         </div>
       ) : (
         <div className="containerMangaDetailsGlobal">
