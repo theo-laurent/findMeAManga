@@ -9,6 +9,7 @@
 .containerHome img {
   max-width: 500px;
   width: 40%;
+  margin-right: 100px;
 }
 
 .containerHome div {
@@ -16,7 +17,6 @@
 }
 
 .containerHome h1 {
-  width: 350px;
   line-height: 2.5;
   font-size: 40px;
 }
@@ -41,10 +41,15 @@
     display: block;
     width: 90%;
     margin-bottom: 100px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .containerHome h1 {
+    font-size: 30px;
   }
 
   .containerHome img {
-    display: none;
+    width: 250px;
+    margin: 0;
   }
 }
-

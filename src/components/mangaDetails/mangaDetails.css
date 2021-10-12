@@ -57,7 +57,23 @@
 }
 
 .containerMangaDetails_text h3 {
-  color: rgb(194, 26, 26);
+  color: #c21a1a;
+}
+
+.containerMangaDetails_text a {
+  color: #3f51b5;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.containerMangaDetails_text a:hover {
+  color: white;
+  background-color: #3f51b5;
+}
+
+.containerMangaDetails_text_infos {
+  display: flex;
+  justify-content: space-between;
 }
 
 .icon {

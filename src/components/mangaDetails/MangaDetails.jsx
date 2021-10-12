@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 // react icons
 import { BsArrowReturnLeft } from "react-icons/bs";
+// uuid for unique key
+import { v4 as uuidv4 } from "uuid";
 
 export default function MangaDetails() {
   const [manga, setManga] = useState();
@@ -29,9 +31,6 @@ export default function MangaDetails() {
     },
     [id]
   );
-
-  console.log(history);
-
 
   return (
     <>
@@ -65,6 +64,37 @@ export default function MangaDetails() {
                 {manga.authors.map((author) => author.name + " / ")}
               </h4>
               <p>{manga.synopsis}</p>
+              <h4>
+                <u>More infos</u>
+              </h4>
+              {manga.external_links.map((link) => (
+                <p key={uuidv4()}>
+                  <a href={link.url} target="_blank" rel="noreferrer">
+                    {link.name}
+                  </a>
+                </p>
+              ))}
+              <div className="containerMangaDetails_text_infos">
+                <p>
+                  <span style={{ fontWeight: "bold" }}>Publication :</span>
+                  <span style={{ color: "#C21A1A" }}> {manga.status}</span>
+                </p>
+                <p>
+                  <span style={{ fontWeight: "bold" }}>
+                    Number of chapters :
+                  </span>
+                  <span style={{ color: "#C21A1A" }}>
+                    {" "}
+                    {manga.chapters ? manga.chapters : "Undefined"}
+                  </span>
+                </p>
+              </div>
+              <p>
+                Published from {manga.published.from.slice(0, 4)} to{" "}
+                {manga.published.to
+                  ? manga.published.to.slice(0, 4)
+                  : "/still in progress/"}
+              </p>
             </div>
           </div>
         </div>

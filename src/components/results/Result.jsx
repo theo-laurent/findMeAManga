@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 export default function Results(props) {
   const [arrayManga, setArrayManga] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [arrayMangaSort, setArrayMangaSort] = useState();
   const genre = props.location.state.genre;
   const nameGenre = props.location.state.name;
 
@@ -47,9 +48,30 @@ export default function Results(props) {
     [genre]
   );
 
+  function arraySort() {
+    arrayManga.sort(function compare(a, b) {
+      if (a.title < b.title) {
+        return -1;
+      }
+      if (a.title > b.title) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+
   return (
     <div className="containerResultsGlobal">
       <h1>The manga corresponding to your choices : {`{${nameGenre}}`}</h1>
+      <span>
+        <select id="results-select">
+          <option>Sort by...</option>
+          <option>Popularity</option>
+          <option>Name</option>
+          <option>Date: oldest to newest</option>
+          <option>Date: newst to oldest</option>
+        </select>
+      </span>
       <div className="containerResults">
         {loading ? (
           <div className="sk-chase">
