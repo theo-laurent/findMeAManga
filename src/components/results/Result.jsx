@@ -9,7 +9,8 @@ import { v4 as uuidv4 } from "uuid";
 export default function Results(props) {
   const [arrayManga, setArrayManga] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [arrayMangaSort, setArrayMangaSort] = useState();
+  const [optionState, setOptionState] = useState();
+
   const genre = props.location.state.genre;
   const nameGenre = props.location.state.name;
 
@@ -60,16 +61,18 @@ export default function Results(props) {
     });
   }
 
+  console.log(optionState);
+
   return (
     <div className="containerResultsGlobal">
       <h1>The manga corresponding to your choices : {`{${nameGenre}}`}</h1>
       <span>
-        <select id="results-select">
+        <select id="results-select" value={setOptionState}>
           <option>Sort by...</option>
-          <option>Popularity</option>
-          <option>Name</option>
-          <option>Date: oldest to newest</option>
-          <option>Date: newst to oldest</option>
+          <option value="popularity">Popularity</option>
+          <option value="name">Name</option>
+          <option value="oldest">Date: oldest to newest</option>
+          <option value="newest">Date: newst to oldest</option>
         </select>
       </span>
       <div className="containerResults">

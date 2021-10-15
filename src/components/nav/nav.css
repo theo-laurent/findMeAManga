@@ -35,7 +35,7 @@
   display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
   .containerNav h1 {
     margin: 10px;
   }
@@ -47,9 +47,12 @@
   .containerNav_responsive {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding-top: 10px;
     cursor: pointer;
+  }
+
+  .iconNav {
+    padding-right: 15px;
+    font-size: 35px;
   }
 
   .containerNav_responsive-close {
@@ -60,21 +63,22 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    background-color: #4c6c9d;
+    background-color: #f1f1f1;
+    color: black;
     border-radius: 5px;
     height: 200px;
-    width: 50%;
+    width: 100%;
     position: absolute;
     top: 47px;
+    left: 0%;
     justify-content: space-around;
-  }
-  .containerNav_responsive-open a {
-    color: white;
-    border-bottom: solid 1px black;
+    align-items: center;
+    padding: 0;
   }
 
   .active {
     background-color: transparent;
+    color: black !important;
   }
 }
 
