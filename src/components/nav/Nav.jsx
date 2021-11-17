@@ -1,7 +1,7 @@
 // css
 import "./nav.css";
 // import link router
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 // import react state
 import { useState } from "react";
 // import icon
@@ -17,13 +17,16 @@ export default function Nav() {
 
   return (
     <div className="containerNav">
-      <h1>FIND ME A MANGA</h1>
+      <Link to="/">
+        {" "}
+        <h1>FIND ME A MANGA</h1>
+      </Link>
       <div className="containerNav_responsive" onClick={navClick}>
-          {!test ? (
-            <GiHamburgerMenu className="iconNav" />
-          ) : (
-            <GrClose className="iconNav" />
-          )}
+        {!test ? (
+          <GiHamburgerMenu className="iconNav" />
+        ) : (
+          <GrClose className="iconNav" />
+        )}
         <ul
           className={
             test
