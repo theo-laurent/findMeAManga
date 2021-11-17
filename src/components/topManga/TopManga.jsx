@@ -1,7 +1,6 @@
 import "./topManga.css";
 // react and router
-import { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // uuid for unique key
 import { v4 as uuidv4 } from "uuid";
@@ -11,7 +10,8 @@ import topPersonal from "../../assets/personalManga";
 export default function TopManga() {
   const [top, setTop] = useState([]);
 
-  useEffect(function () {
+  useEffect(
+    function () {
     fetch("https://api.jikan.moe/v3/top/manga", { method: "GET" })
       .then(function (res) {
         return res.json();

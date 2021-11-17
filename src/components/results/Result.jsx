@@ -1,4 +1,3 @@
-// css
 import "./results.css";
 // react et router
 import { useEffect, useState } from "react";
@@ -48,12 +47,10 @@ export default function Results(props) {
     [genre]
   );
 
-  
-
   return (
     <div className="containerResultsGlobal">
       <h1>The manga corresponding to your choices : {`{${nameGenre}}`}</h1>
-      
+
       <div className="containerResults">
         {loading ? (
           <div className="sk-chase">
