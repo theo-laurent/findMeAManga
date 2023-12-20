@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://theo-laurent.github.io/findMeAManga/",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "npm": "^8.0.0",
@@ -12,7 +12,7 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.0",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
